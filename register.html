@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row-between">
+                <img src="assets/images/gambar_1.png" />
+                <ul>
+                    <li>Home</li>
+                    <li>Program</li>
+                    <li>Blog</li>
+                    <li>Job Information</li>
+                    <li>About Us</li>
+                </ul>
+                <div>
+                    <p>Login</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="form">
+        <form id="formRegister" action="#">
+            <div>
+                <input id="full_name" type="text" name="full_name" value="" placeholder="Masukkan Nama Lengkap"
+                    required>
+            </div>
+            <div>
+                <input id="email" type="email" name="email" value="" placeholder="Masukkan Email" required>
+            </div>
+            <div>
+                <input id="password" type="password" name="password" value="" placeholder="Masukkan Password" required>
+            </div>
+            <div>
+                <input id="konf_password" type="password" name="konf_password" value=""
+                    placeholder="Konfirmasi Password" required>
+            </div>
+            <div>
+                <button type="button" onclick="checkSubmit()">SIMPAN</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function checkSubmit(){
+            let password = $('#password').val()
+            let konf_password = $('#konf_password').val()
+
+            if(password == konf_password){
+                $('#formRegister').submit()
+            }else{
+                alert("Password dan Konfirmasi Password tidak sama")
+            }
+        }
+    </script>
+</body>
+
+</html>
